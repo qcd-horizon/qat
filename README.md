@@ -1,2 +1,2 @@
 # qat
-quantizatoin aware training 
+a repository for quantizatoin of some networks by training
