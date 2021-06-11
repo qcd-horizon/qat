@@ -13,7 +13,7 @@ import time
 import copy
 import numpy as np
 
-from resnet import resnet18
+import torchvision.models as models
 
 def set_random_seeds(random_seed=0):
 
@@ -215,7 +215,7 @@ def create_model(num_classes=10):
     # The number of channels in ResNet18 is divisible by 8.
     # This is required for fast GEMM integer matrix multiplication.
     # model = torchvision.models.resnet18(pretrained=False)
-    model = resnet18(num_classes=num_classes, pretrained=False)
+    model = models.resnet18(num_classes=num_classes, pretrained=False)
 
     # We would use the pretrained ResNet18 as a feature extractor.
     # for param in model.parameters():
